@@ -31,10 +31,10 @@
         <div class="row justify-content-center">
 
             <!-- <div class="col-xl-10 col-lg-12 col-md-9"> -->
-            <div class="col-xl-5 col-lg-6 col-md-5">
+            <div class="col-xl-5 col-lg-6 col-md-5" >
 
                 <div class="card o-hidden border-0 shadow-lg my-5">
-                    <div class="card-body p-0">
+                    <div class="card-body p-0" style="border-radius: 20%">
                         <!-- Nested Row within Card Body -->
                         <div class="row">
                             <!-- <div class="col-lg-6 d-none d-lg-block bg-login-image"></div> -->
