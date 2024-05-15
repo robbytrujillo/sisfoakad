@@ -50,10 +50,12 @@
                                             <input type="text" class="form-control form-control-user"
                                                 id="exampleInputEmail" aria-describedby="emailHelp"
                                                 placeholder="username Anda" name="username">
+                                                <?php echo form_error('username', '<div class="text-danger small ml-3">','</div>')  ?>
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user"
                                                 id="exampleInputPassword" placeholder="Password Anda" name="password">
+                                                <?php echo form_error('password', '<div class="text-danger small ml-3">','</div>')  ?>
                                         </div>
                                         <!-- <div class="form-group">
                                             <div class="custom-control custom-checkbox small">

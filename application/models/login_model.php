@@ -25,7 +25,12 @@ class Login_model extends CI_Model {
                 redirect ('administrator/dashboard');
             }
         } else {
-            $this->session->set_flashdata('pesan', 'Username dan Password Anda Salah');
+            $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                            Username atau Password Anda Salah
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                            </div>');
             redirect('administrator/auth');
         }
     }
