@@ -25,25 +25,33 @@
             </li>
 
             <!-- Divider -->
-            <hr class="sidebar-divider">
+            <!-- <hr class="sidebar-divider"> -->
 
             <!-- Heading -->
-            <div class="sidebar-heading">
+            <!-- <div class="sidebar-heading">
                 Interface
-            </div>
+            </div> -->
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Components</span>
+                    <i class="fas fa-university"></i>
+                    <span>Akademik</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Components:</h6>
-                        <a class="collapse-item" href="buttons.html">Buttons</a>
-                        <a class="collapse-item" href="cards.html">Cards</a>
+                        <h6 class="collapse-header">Sub-Menu Akademik</h6>
+                        <a class="collapse-item" href="buttons.html">Jurusan</a>
+                        <a class="collapse-item" href="cards.html">Program Studi</a>
+                        <a class="collapse-item" href="cards.html">Mata Kuliah</a>
+                        <a class="collapse-item" href="cards.html">Mahasiswa</a>
+                        <a class="collapse-item" href="cards.html">Tahun Akademik</a>
+                        <a class="collapse-item" href="cards.html">KRS</a>
+                        <a class="collapse-item" href="cards.html">Input Nilai</a>
+                        <a class="collapse-item" href="cards.html">KHS</a>
+                        <a class="collapse-item" href="cards.html">Cetak Transkip</a>
+                        <a class="collapse-item" href="cards.html">Dosen</a>
                     </div>
                 </div>
             </li>
@@ -53,45 +61,45 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-wrench"></i>
-                    <span>Utilities</span>
+                    <span>Pengaturan</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href="utilities-color.html">Colors</a>
-                        <a class="collapse-item" href="utilities-border.html">Borders</a>
-                        <a class="collapse-item" href="utilities-animation.html">Animations</a>
-                        <a class="collapse-item" href="utilities-other.html">Other</a>
+                        <h6 class="collapse-header">Sub-Menu Pengaturan</h6>
+                        <a class="collapse-item" href="utilities-color.html">User</a>
+                        <a class="collapse-item" href="utilities-border.html">Menu</a>
+                        
                     </div>
                 </div>
             </li>
 
             <!-- Divider -->
-            <hr class="sidebar-divider">
+            <!-- <hr class="sidebar-divider"> -->
 
             <!-- Heading -->
-            <div class="sidebar-heading">
+            <!-- <div class="sidebar-heading">
                 Addons
-            </div>
+            </div> -->
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
                     aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-folder"></i>
-                    <span>Pages</span>
+                    <span>Info Kampus</span>
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="login.html">Login</a>
-                        <a class="collapse-item" href="register.html">Register</a>
-                        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
-                        <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="404.html">404 Page</a>
-                        <a class="collapse-item" href="blank.html">Blank Page</a>
+                        <h6 class="collapse-header">Sub Menu Info Kampus</h6>
+                        <a class="collapse-item" href="login.html">Identitas</a>
+                        <a class="collapse-item" href="register.html">Kategori</a>
+                        <a class="collapse-item" href="forgot-password.html">Informasi Kampus</a>
+                        <a class="collapse-item" href="404.html">Tentang Kampus</a>
+                        <a class="collapse-item" href="blank.html">Fasilitas</a>
+                        <a class="collapse-item" href="404.html">Materi Perkuliahan</a>
+                        <a class="collapse-item" href="blank.html">Galeri</a>
+                        <a class="collapse-item" href="blank.html">Contact</a>
                     </div>
                 </div>
             </li>
@@ -99,16 +107,16 @@
             <!-- Nav Item - Charts -->
             <li class="nav-item">
                 <a class="nav-link" href="charts.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span></a>
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span></a>
             </li>
 
             <!-- Nav Item - Tables -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="tables.html">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Tables</span></a>
-            </li>
+            </li> -->
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -119,11 +127,11 @@
             </div>
 
             <!-- Sidebar Message -->
-            <div class="sidebar-card d-none d-lg-flex">
+            <!-- <div class="sidebar-card d-none d-lg-flex">
                 <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="...">
                 <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>
                 <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to Pro!</a>
-            </div>
+            </div> -->
 
         </ul>
         <!-- End of Sidebar -->
