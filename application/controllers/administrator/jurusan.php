@@ -45,8 +45,8 @@ class Jurusan extends CI_Controller {
     }
 
     public function _rules() {
-        $this->form_validation->set_rules('kode_jurusan', 'kode_jurusan', 'required');
-        $this->form_validation->set_rules('nama_jurusan', 'nama_jurusan', 'required');
+        $this->form_validation->set_rules('kode_jurusan', 'kode_jurusan', 'required',['required' => 'Kode Jurusan wajib diisi!']);
+        $this->form_validation->set_rules('nama_jurusan', 'nama_jurusan', 'required',['required' => 'Nama Jurusan wajib diisi!']);
     }
 }
 
