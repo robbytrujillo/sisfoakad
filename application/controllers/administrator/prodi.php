@@ -18,13 +18,13 @@ class Prodi extends CI_Controller {
     }
 
     public function tambah_prodi_aksi() {
-        $this->rules();
+        $this->_rules();
 
         if ($this->form_validation->run() == FALSE) {
             $this->tambah_prodi();
         } else {
-            $kode_prodi = $this->input->post('kode_prodi');
-            $nama_prodi = $this->input->post('nama_prodi');
+            $kode_prodi   = $this->input->post('kode_prodi');
+            $nama_prodi   = $this->input->post('nama_prodi');
             $nama_jurusan = $this->input->post('nama_jurusan');
 
             $data = array(
@@ -34,8 +34,20 @@ class Prodi extends CI_Controller {
             );
 
             $this->prodi_model->insert_data($data, 'prodi');
+            $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+                                                    Data Prodi berhasil ditambahkan!
+                                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                    </div>');
             redirect('administrator/prodi');
         }
+    }
+
+    public function _rules() {
+        $this->form_validation->set_rules('kode_prodi', 'kode_prodi', 'required',['required' => 'Kode Prodi wajib diisi!']);
+        $this->form_validation->set_rules('nama_prodi', 'nama_prodi', 'required',['required' => 'Nama Prodi wajib diisi!']);
+        $this->form_validation->set_rules('nama_jurusan', 'nama_jurusan', 'required',['required' => 'Nama Jurusan wajib diisi!']);
     }
     
 }
