@@ -4,7 +4,7 @@
         <i class="fas fa-university"></i>Form Input Mata Kuliah
     </div>
 
-    <form method="post" action="<?php echo base_url('administrator/matakuliah/tambah_matakuliah_asli') ?>">
+    <form method="post" action="<?php echo base_url('administrator/matakuliah/tambah_matakuliah_aksi') ?>">
 
     <div class="form-group">
         <label>Kode Mata Kuliah</label>
