@@ -1,5 +1,14 @@
 <div class="container-fluid">
 
+    <div class="alert alert-success" role="alert">
+        <i class="fas fa-university"></i> Mahasiswa
+    </div>
+
+    <?php echo $this->session->flashdata('pesan') ?>
+
+    <?php echo anchor('administrator/mahasiswa/tambah_mahasiswa','<button class="btn btn-sm btn-primary mb-3"><i class="fas fa-plus fa-sm"></i> Tambah Mahasiswa</button>') ?>
+    
+
     <table class="table table-striped table-hover table-bordered">
         <tr>
             <th>NO</th>
