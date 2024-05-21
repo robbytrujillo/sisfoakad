@@ -8,6 +8,8 @@
         
         <?php foreach($detail as $dt) : ?>
 
+            <img class="mb-5" src="<?php echo base_url('assets/uploads/').$dt->photo ?>" style="width: 20%; border-radius: 10%">
+
             <tr>
                 <td>NIM</td>
                 <td><?php echo $dt->nim; ?></td>
@@ -52,14 +54,10 @@
                 <td>NAMA PRODI</td>
                 <td><?php echo $dt->nama_prodi; ?></td>
             </tr>
-            
-            <tr>
-                <td>PHOTO</td>
-                <td><?php echo $dt->photo; ?></td>
-            </tr>
-            
+        
         <?php endforeach; ?>
     </table>
     
     <?php echo anchor('administrator/mahasiswa', '<div class="btn btn-sm btn-primary">Kembali</div>') ?>
+    <br><br><br><br>
 </div>
