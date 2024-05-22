@@ -7,13 +7,13 @@
     <?php echo form_open_multipart('administrator/mahasiswa/tambah_mahasiswa_aksi') ?>
 
     <div class="form-group">
-        <label>NIM Mahasiswa</label>
+        <label>NIM</label>
         <input type="text" name="nim" class="form-control">
         <?php echo form_error('nim','<div class="text-danger small ml-3">','</div>') ?>
     </div>
     
     <div class="form-group">
-        <label>Nama Mahasiswa</label>
+        <label>Nama Lengkap</label>
         <input type="text" name="nama_lengkap" class="form-control">
         <?php echo form_error('nama_lengkap','<div class="text-danger small ml-3">','</div>') ?>
     </div>
@@ -44,7 +44,7 @@
 
     <div class="form-group">
         <label>Tanggal Lahir</label>
-        <input type="text" name="tanggal_lahir" class="form-control">
+        <input type="date" name="tanggal_lahir" class="form-control">
         <?php echo form_error('tanggal_lahir','<div class="text-danger small ml-3">','</div>') ?>
     </div>
     
@@ -65,6 +65,7 @@
         <?php foreach($prodi as $prd) : ?>
             <option value="<?php echo $prd->nama_prodi; ?>"><?php echo $prd->nama_prodi; ?></option>
         <?php endforeach; ?>
+        </select>
         <?php echo form_error('nama_prodi','<div class="text-danger small ml-3">','</div>') ?>
     </div>
 
@@ -73,7 +74,7 @@
         <input type="file" name="photo">
     </div>
 
-    <button type="submit" class="btn btn-primary">Simpan</button>  
+    <button type="submit" class="btn btn-primary mb-5 mt-3">Simpan</button>  
 
     <?php form_close(); ?>
 

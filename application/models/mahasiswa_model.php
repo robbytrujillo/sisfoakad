@@ -14,6 +14,10 @@ class Mahasiswa_model extends CI_Model {
             return false;
         }
     }
+
+    public function insert_data($data,$table) {
+        $this->db->insert($table,$data);    
+    }
 }
 
 ?>
