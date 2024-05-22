@@ -69,7 +69,7 @@
     </div>
 
     <div class="form-group">
-        <label>Foto</label>
+        <label>Foto</label><br>
         <input type="file" name="photo">
     </div>
 
