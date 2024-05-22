@@ -81,6 +81,13 @@ class Mahasiswa extends CI_Controller {
             }
         }
 
+        public functiion update($id) {
+            $where = array('id' => $id);
+            
+            $data['mahasiswa'] = $this->db->query("select * from mahasiswa mhs, prodi prd where mhs.nama_prodi = prd.nama_prodi and mhs.id = '$id'")->result();
+
+        };
+
         public function _rules() {
             $this->form_validation->set_rules('nim','nim','required',['required' => 'NIM wajib diisi!']);
             $this->form_validation->set_rules('nama_lengkap','nama_lengkap','required',['required' => 'Nama Lengkap wajib diisi!']);
