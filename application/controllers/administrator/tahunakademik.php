@@ -49,6 +49,19 @@ class Tahunakademik extends CI_Controller {
         $this->form_validation->set_rules('semester', 'semester', 'required',['required' => 'Semester wajib diisi!']);
         $this->form_validation->set_rules('status', 'status', 'required',['required' => 'Status wajib diisi!']);
     }
+
+    public function update($id) {
+        $where = array('id' => $id);
+        
+        $data['tahunakademik'] = $this->tahunakademik_model->edit_data($where, 'tahunakademik')->result();
+        
+        $this->load->view('templates_administrator/header');
+        $this->load->view('templates_administrator/sidebar');
+        $this->load->view('administrator/tahunakademik_update', $data);
+        $this->load->view('templates_administrator/footer');
+    }
+
+    
 }
 
 ?>
