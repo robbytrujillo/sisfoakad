@@ -176,4 +176,5 @@ class Mahasiswa extends CI_Controller {
                                                         </div>');
         redirect('administrator/mahasiswa');
          }
+    }
 ?>
