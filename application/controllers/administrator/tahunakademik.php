@@ -61,7 +61,33 @@ class Tahunakademik extends CI_Controller {
         $this->load->view('templates_administrator/footer');
     }
 
-    
+    public function update_aksi() {
+        $id = $this->input->post('id');
+        $tahun_akademik = $this->input->post('tahun_akademik');
+        $semester = $this->input->post('semester');
+        $status = $this->input->post('status');
+
+        $data = array (
+            'tahun_akademik'  => $tahun_akademik,
+            'semester'        => $semester,
+            'status'          => $status
+        );
+
+        $where = array(
+            'id' => $id
+        );
+
+        $this->tahunakademik_model->update_data($where,$data, 'tahunakademik');
+        $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+                                                        Data Tahun Akademik berhasil diubah!
+                                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                        </div>');
+            redirect('administrator/tahunakademik');
+    }
+
+
 }
 
 ?>
