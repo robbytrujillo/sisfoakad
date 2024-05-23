@@ -87,6 +87,17 @@ class Tahunakademik extends CI_Controller {
             redirect('administrator/tahunakademik');
     }
 
+    public function delete($id) {
+            $where = array('id' => $id);
+            $this->tahunakademik_model->hapus_data($where, 'tahunakademik');
+            $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                                        Data Tahun akademik berhasil dihapus!
+                                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                        </div>');
+        redirect('administrator/tahunakademik');
+    }
 
 }
 
