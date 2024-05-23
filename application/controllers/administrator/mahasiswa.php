@@ -165,5 +165,15 @@ class Mahasiswa extends CI_Controller {
             }
         }
 
-    }
+        public function delete($id) {
+            $where = array('id' => $id);
+            $this->mahasiswa_model->hapus_data($where, 'mahasiswa');
+            $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                                        Data Mahasiswa berhasil dihapus!
+                                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                        </div>');
+        redirect('administrator/mahasiswa');
+         }
 ?>
