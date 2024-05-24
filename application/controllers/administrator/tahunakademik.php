@@ -51,7 +51,7 @@ class Tahunakademik extends CI_Controller {
     }
 
     public function update($id) {
-        $where = array('id' => $id);
+        $where = array('id_tahun_akademik' => $id);
         
         $data['tahunakademik'] = $this->tahunakademik_model->edit_data($where, 'tahunakademik')->result();
         
@@ -74,7 +74,7 @@ class Tahunakademik extends CI_Controller {
         );
 
         $where = array(
-            'id' => $id
+            'id_tahun_akademik' => $id
         );
 
         $this->tahunakademik_model->update_data($where,$data, 'tahunakademik');
@@ -88,7 +88,7 @@ class Tahunakademik extends CI_Controller {
     }
 
     public function delete($id) {
-            $where = array('id' => $id);
+            $where = array('id_tahun_akademik' => $id);
             $this->tahunakademik_model->hapus_data($where, 'tahunakademik');
             $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
                                                         Data Tahun akademik berhasil dihapus!

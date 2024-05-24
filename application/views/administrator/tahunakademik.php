@@ -25,8 +25,8 @@
                 <td><?php echo $ak->tahun_akademik ?></td>
                 <td><?php echo $ak->semester ?></td>
                 <td><?php echo $ak->status ?></td>
-                <td width="20px"><?php echo anchor('administrator/tahunakademik/update/'.$ak->id,'<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>') ?></td>
-                <td width="20px"><?php echo anchor('administrator/tahunakademik/delete/'.$ak->id,'<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>') ?></td>
+                <td width="20px"><?php echo anchor('administrator/tahunakademik/update/'.$ak->id_tahun_akademik,'<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>') ?></td>
+                <td width="20px"><?php echo anchor('administrator/tahunakademik/delete/'.$ak->id_tahun_akademik,'<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>') ?></td>
             </tr>
         
         <?php endforeach; ?>
