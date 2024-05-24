@@ -33,6 +33,17 @@ class Krs extends CI_Controller {
                                                     </div>');
             redirect('administrator/krs');
         }
+        
+        $data = array(
+            'nim' => $nim,
+            'id_tahun_akademik' => $thn_akademik,
+            'nama_lengkap' => $this->mahasiswa_model->get_by_id($nim)->nama_lengkap
+        );
+    }
+
+    public function _rulesKrs() {
+        $this->form_validation->set_rules('nim', 'nim', 'required');
+        $this->form_validation->set_rules('id_tahun_akademik', 'id_tahun_akademik', 'required');
     }
 }
 ?>
