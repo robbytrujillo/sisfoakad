@@ -23,7 +23,7 @@
 
 </head>
 
-<body class="bg-gradient-primary">
+<body class="bg-gradient-white">
 
     <div class="container"><br><br><br>
 
@@ -33,8 +33,8 @@
             <!-- <div class="col-xl-10 col-lg-12 col-md-9"> -->
             <div class="col-xl-5 col-lg-6 col-md-5" >
 
-                <div class="card o-hidden border-0 shadow-lg my-5">
-                    <div class="card-body p-0" style="border-radius: 20%">
+                <div class="card o-hidden border-0 shadow-lg my-5" style="border-radius: 25px">
+                    <div class="card-body p-0" >
                         <!-- Nested Row within Card Body -->
                         <div class="row">
                             <!-- <div class="col-lg-6 d-none d-lg-block bg-login-image"></div> -->
