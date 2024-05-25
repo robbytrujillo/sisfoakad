@@ -52,14 +52,15 @@ class Krs extends CI_Controller {
 
         $this->load->view('templates_administrator/header');
         $this->load->view('templates_administrator/sidebar');
-        $this->load->view('administrator/krs_list',$data);
+        $this->load->view('administrator/krs_list',$dataKrs);
         $this->load->view('templates_administrator/footer');
     }
 
     public function baca_krs($nim,$thn_akademik) {
         $this->db->select('k.id_krs,k.kode_matakuliah,m.nama_matakuliah,m.sks');
         $this->db->from('krs as k');
-        $this->db->where('k.id_tahun_akademik', $thn_akad);
+        $this->db->where('k.nim', $nim);
+        $this->db->where('k.id_tahun_akademik', $thn_akademik);
         $this->db->join('matakuliah as m', 'm.kode_matakuliah = k.kode_matakuliah');
 
         $krs = $this->db->get()->result();

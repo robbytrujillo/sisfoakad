@@ -8,10 +8,11 @@
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-university"></i>   
+                <!-- <div class="sidebar-brand-icon rotate-n-15"> -->
+                    <!-- <i class="fas fa-university"></i>    -->
+                <!-- </div> -->
+                <div class="sidebar-brand-text mx-1"><img src="<?php echo base_url('/assets/img/SisfoakadMahad1.png') ?>" width="60%">
                 </div>
-                <div class="sidebar-brand-text mx-1">SisfoAkad <sup>Mahad</sup></div>
             </a>
 
             <!-- Divider -->
