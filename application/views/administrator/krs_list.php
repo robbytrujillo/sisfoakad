@@ -32,7 +32,7 @@
         </table>
     </center>
 
-    <?php echo anchor('administrator/krs/tambah_krs','<button class="btn btn-sm btn-primary mb-3"><i class="fas fa-plus fa-sm"></i> Tambah Data KRS</button>') ?>
+    <?php echo anchor('administrator/krs/tambah_krs/'.$nim.'/'.$id_tahun_akademik,'<button class="btn btn-sm btn-primary mb-3"><i class="fas fa-plus fa-sm"></i> Tambah Data KRS</button>') ?>
     <?php echo anchor('administrator/krs/print','<button class="btn btn-sm btn-info mb-3"><i class="fas fa-plus fa-print"></i> Print</button>') ?>
 
     <table class="table table-bordered table-hover table-striped">
