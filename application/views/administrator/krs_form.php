@@ -10,7 +10,7 @@
             <label>Tahun Akademik</label>
             <input type="hidden" name="id_tahun_akademik" class="form-control" value="<?php echo $id_tahun_akademik; ?>">
             <input type="hidden" name="id_krs" class="form-control" value="<?php echo $id_krs; ?>">
-            <input type="text" name="thn_akademik_semester" class="form-control" value="<?php echo $thn_akademik_semseter. '/' .$semester; ?>" readonly/>
+            <input type="text" name="thn_akademik_semester" class="form-control" value="<?php echo $thn_akademik_semester. '/' .$semester; ?>" readonly/>
         </div>
 
         <div class="form-group">

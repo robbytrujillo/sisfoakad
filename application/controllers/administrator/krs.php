@@ -76,7 +76,7 @@ class Krs extends CI_Controller {
         $data = array (
             'id_krs'                 => set_value('id_krs'),
             'id_tahun_akademik'      => $thn_akademik,
-            'thn_akademik_semseter'  => $this->tahunakademik_model->get_by_id($thn_akademik)->tahun_akademik,
+            'thn_akademik_semester'  => $this->tahunakademik_model->get_by_id($thn_akademik)->tahun_akademik,
             'semester'               => $this->tahunakademik_model->get_by_id($thn_akademik)->semester==1?'Ganjil':'Genap',
             'nim'                    => $nim,
             'kode_matakuliah'        => set_value('kode_matakuliah')

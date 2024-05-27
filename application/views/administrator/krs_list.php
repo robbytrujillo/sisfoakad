@@ -53,9 +53,10 @@
             <td width="20px"><?php echo $no++; ?></td>
             <td><?php echo $krs->kode_matakuliah; ?></td>
             <td><?php echo $krs->nama_matakuliah; ?></td>
-            <td><?php echo $krs->sks; $jumlahSks+=$krs->sks; ?></td>
+            <td><?php echo $krs->sks; 
+                           $jumlahSks = $krs->sks; ?></td>
             <td width="20px"><?php echo anchor('administrator/krs/update/'.$krs->id_krs,'<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>') ?></td>
-            <td width="20px"><?php echo anchor('administrator/krs/delete/'.$krs->id_prodi,'<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>') ?></td>
+            <td width="20px"><?php echo anchor('administrator/krs/delete/'.$krs->id_krs,'<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>') ?></td>
         </tr>
         <tr>
             <td colspan="3" align="right"><strong>Jumlah SKS</strong></td>
