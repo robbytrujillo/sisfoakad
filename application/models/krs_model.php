@@ -17,5 +17,10 @@ class Krs_model extends CI_Model {
         $this->db->where($this->id, $id);
         $this->db->update($this->table, $data);
     }
+
+    public function hapus_data($where, $table) {
+        $this->db->where($where);
+        $this->db->delete($table);
+    }
 }
 ?>
