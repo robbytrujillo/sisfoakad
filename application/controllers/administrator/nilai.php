@@ -16,7 +16,7 @@ class Nilai extends CI_Controller {
     public function nilai_aksi() {
         $this->_rulesKhs();
         
-        if($this->form_validation->urn() == FALSE) {
+        if($this->form_validation->run() == FALSE) {
             $this->index();
         } else {
             $nim = $this->input->post('nim', TRUE);
@@ -36,7 +36,7 @@ class Nilai extends CI_Controller {
             $sql = $this->db->query($query)->result();
 
             $smt = $this->db->select('tahun_akademik, semester')
-                            ->from('tahun_akademik')
+                            ->from('tahunakademik')
                             ->where(array('id_tahun_akademik'=>$thn_akademik))->get()->row();
 
             $query_str = "SELECT mahasiswa.nim,
@@ -44,7 +44,7 @@ class Nilai extends CI_Controller {
                                  prodi.nama_prodi
                             FROM mahasiswa
                             INNER JOIN prodi
-                            ON (mahasiswa.nama_prodi = prodi_nama_prodi);";
+                            ON (mahasiswa.nama_prodi = prodi.nama_prodi);";
             
             $mhs = $this->db->query($query_str)->row();
 
@@ -56,7 +56,7 @@ class Nilai extends CI_Controller {
 
         $data = array (
             'mhs_data'  => $sql,
-            'mhs_name'  => $nim,
+            'mhs_nim'  => $nim,
             'mhs_nama'  => $mhs->nama_lengkap,
             'mhs_prodi' => $mhs->nama_prodi,
             'thn_akademik'  => $smt->tahun_akademik."(".$tampilSemester.")"
