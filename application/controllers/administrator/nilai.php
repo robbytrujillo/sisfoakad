@@ -67,6 +67,11 @@ class Nilai extends CI_Controller {
         $this->load->view('administrator/khs',$data);
         $this->load->view('templates_administrator/footer');
     }
+
+    public function _rulesKhs() {
+        $this->form_validation->set_rules('nim', 'nim', 'required');
+        $this->form_validation->set_rules('id_tahun_akademik', 'id_tahun_akademik', 'required');
+    }
 }
 
 ?>
