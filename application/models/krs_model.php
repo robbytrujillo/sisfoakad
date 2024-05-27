@@ -7,5 +7,15 @@ class Krs_model extends CI_Model {
     public function insert($data) {
         $this->db->insert($this->table, $data);
     }
+
+    public function get_by_id($id) {
+        $this->db->where($this->id,$id);
+        return $this->db->get($this->table)->row();
+    }
+
+    public function update($id, $data) {
+        $this->db->where($this->id, $id);
+        $this->db->update($this->table, $data);
+    }
 }
 ?>
