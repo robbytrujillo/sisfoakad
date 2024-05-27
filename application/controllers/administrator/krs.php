@@ -112,7 +112,7 @@ class Krs extends CI_Controller {
                                                         <span aria-hidden="true">&times;</span>
                                                     </button>
                                                     </div>');
-            redirect('administrator/krs/krs_aksi');
+            redirect('administrator/krs/index');
         }
     }
 
