@@ -72,6 +72,18 @@ class Nilai extends CI_Controller {
         $this->form_validation->set_rules('nim', 'nim', 'required');
         $this->form_validation->set_rules('id_tahun_akademik', 'id_tahun_akademik', 'required');
     }
+
+    public function input_nilai() {
+        $data = array(
+            'kode_matakuliah' => set_value('kode_matakuliah'),
+            'id_tahun_akademik' => set_value('id_tahun_akademik')
+        );
+
+        $this->load->view('templates_administrator/header');
+        $this->load->view('templates_administrator/sidebar');
+        $this->load->view('administrator/input_nilai_form',$data);
+        $this->load->view('templates_administrator/footer');
+    }
 }
 
 ?>
