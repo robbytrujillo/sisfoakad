@@ -75,7 +75,7 @@ class Nilai extends CI_Controller {
 
     public function input_nilai() {
         $data = array(
-            'kode_matakuliah' => set_value('kode_matakuliah'),
+            'kode_matakuliah'   => set_value('kode_matakuliah'),
             'id_tahun_akademik' => set_value('id_tahun_akademik')
         );
 
