@@ -21,9 +21,17 @@
 
                     $dropDownList[$dropdown->id_tahun_akademik] = $dropdown->ta_semseter ." ". $tampilSemester;
                 }
-                echo form_dropdown('id_tahun_akademik', $dropDownLis, '', 'calls');
+                echo form_dropdown('id_tahun_akademik', $dropDownList, '', 'class="form-control"');
             ?>
         </div>
+
+        <div class="form-group">
+
+                <label>Kode Mata Kuliah</label>
+                <input type="text" name="kode_matakuliah" class="form-control" placeholder="Masukkan Kode Mata Kuliah">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Proses</button>
     </form> 
 
 </div>
