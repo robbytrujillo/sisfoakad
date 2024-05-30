@@ -8,7 +8,7 @@
         <div class="form-group">
             <label>Tahun Akademik (Semester)</label>
             <?php  
-                $query = $this->db->query('SELECT id_tahun_akademik, semester, CONCAT (tahun_akademik,"/") AS ta_semseter FROM tahunakademik');
+                $query = $this->db->query('SELECT id_tahun_akademik, semester, CONCAT (tahun_akademik,"/") AS ta_semester FROM tahunakademik');
 
                 $dropdowns = $query->result();
 
@@ -19,7 +19,7 @@
                         $tampilSemester = "Genap";
                     }
 
-                    $dropDownList[$dropdown->id_tahun_akademik] = $dropdown->ta_semseter ." ". $tampilSemester;
+                    $dropDownList[$dropdown->id_tahun_akademik] = $dropdown->ta_semester ." ". $tampilSemester;
                 }
                 echo form_dropdown('id_tahun_akademik', $dropDownList, '', 'class="form-control"');
             ?>
