@@ -4,7 +4,7 @@
         <i class="fas fa-university"></i> </i>Form Masuk Halaman Input Nilai
     </div>
 
-    <form method="post" action="<?php base_url('administrator/nilai/input_nilai_aksi') ?>">
+    <form method="post" action="<?php echo base_url('administrator/nilai/input_nilai_aksi') ?>">
         <div class="form-group">
             <label>Tahun Akademik (Semester)</label>
             <?php  

@@ -3,6 +3,7 @@
 $nilai = get_instance();
 $nilai->load->model('matakuliah_model');
 $nilai->load->model('tahunakademik_model');
+
 ?>
 
 <div class="container-fluid">
@@ -18,7 +19,7 @@ $nilai->load->model('tahunakademik_model');
             } else {
                 $tampilSemester = "Genap";
             }
-        }
+        
     ?>
 
     <div class="alert alert-danger">
@@ -27,4 +28,24 @@ $nilai->load->model('tahunakademik_model');
     </div>
 
     <?php echo anchor('administrator/nilai/input_nilai', '<div class="btn btn-sm btn-primary">Kembali</div>') ?>
+
+    <?php
+    } else {
+
+    ?>
+
+    <center>
+        <legend><strong>MASUKKAN NILAI AKHIR</strong></legend>
+
+        <table>
+            <tr>
+                <td>Kode Mata Kuliah</td>
+                <td>: <?php echo $kode_matakuliah; ?></td>
+            </tr>
+        </table>
+    </center>
+    <?php 
+    
+    }
+    ?>
 </div>
