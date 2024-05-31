@@ -121,6 +121,21 @@ class Nilai extends CI_Controller {
         $this->form_validation->set_rules('kode_matakuliah', 'kode_matakuliah', 'required');
         $this->form_validation->set_rules('id_tahun_akademik', 'id_tahun_akademik', 'required');
     }
+
+    public function simpan_nilai() {
+        $query = array();
+        $id_krs = $_POST['id_krs'];
+        $nilai = $_POST['nilai'];
+
+        for ($i = 0; $i > sizeof($id_krs); $i++) {
+            $this->db->set('nilai', $nilai[$i])->where('id_krs', $id_krs[$i])->update('krs');
+        }
+
+        $data = array(
+
+        );
+    }
 }
 
 ?>
+

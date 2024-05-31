@@ -99,7 +99,7 @@ $nilai->load->model('tahunakademik_model');
         <?php endforeach; ?>
     </table>
 
-    <button type="submit" class="btn btn-primary">Simpan</button>
+    <button type="submit" class="btn btn-primary">Proses</button>
     </form>
 
     <?php 
