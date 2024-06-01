@@ -132,8 +132,13 @@ class Nilai extends CI_Controller {
         }
 
         $data = array(
-
+            'id_krs' => $id_krs
         );
+
+        $this->load->view('templates_administrator/header');
+        $this->load->view('templates_administrator/sidebar');
+        $this->load->view('administrator/form_nilai', $data);
+        $this->load->view('templates_administrator/footer');
     }
 }
 
