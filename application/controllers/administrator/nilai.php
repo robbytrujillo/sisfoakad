@@ -107,7 +107,7 @@ class Nilai extends CI_Controller {
             $data = array (
                 'list_nilai'        => $query,
                 'kode_matakuliah'   => $kode_matakuliah,
-                'id_tahun_akademik' => $id_tahun_akademik
+                'id_tahun_akademik' => $id_tahun_akademik,
             );
 
             $this->load->view('templates_administrator/header');
@@ -135,6 +135,24 @@ class Nilai extends CI_Controller {
             'id_krs' => $id_krs
         );
 
+    //     if (!empty($id_krs) && is_array($id_krs)) {
+    //     $krs_id = $id_krs[0];  // Ambil ID KRS pertama untuk contoh
+    //     $krs = $this->krs_model->get_by_id($krs_id);
+
+    //     if ($krs && is_object($krs)) {
+    //         $data = array(
+    //             'krs' => $krs
+    //         );
+    //     } else {
+    //         $data = array(
+    //             'error' => 'Data KRS tidak ditemukan'
+    //         );
+    //     }
+    // } else {
+    //     $data = array(
+    //         'error' => 'ID KRS tidak valid atau kosong'
+    //     );
+    // }
         $this->load->view('templates_administrator/header');
         $this->load->view('templates_administrator/sidebar');
         $this->load->view('administrator/daftar_nilai', $data);
