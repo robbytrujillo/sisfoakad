@@ -55,7 +55,7 @@ $id_tahun_akademik = $krs->id_tahun_akademik;
         </table>
     </center>
 
-    <table class="table table-hover table-bordered table-striped">
+    <table class="table table-hover table-bordered table-striped mt-3">
         <tr>
             <td>NO</td>
             <td>NIM</td>
