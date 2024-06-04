@@ -49,12 +49,32 @@ $id_tahun_akademik = $krs->id_tahun_akademik;
                     Tahun Akademik (Semester)
                 </td>
                 <td>
-                    : <?php echo $thn->tahun_akademik."(".$tampil_semester.")"; ?>
+                    : <?php echo $thn->tahun_akademik."(".$tampilSemester.")"; ?>
                 </td>
-
             </tr>
-
         </table>
-
     </center>
+
+    <table class="table table-hover table-bordered table-striped">
+        <tr>
+            <td>NO</td>
+            <td>NIM</td>
+            <td>NAMA LENGKAP</td>
+            <td>NILAI</td>
+        </tr>
+
+        <?php  
+        $no = 1;
+        for ($i=0; $i<sizeof($id_krs); $i++) {
+            ?>
+
+        <tr>
+            <td><?php echo $no++ ?></td>
+            <?php $nim = $nilai->krs_model->get_by_id($id_krs[$i])->nim; ?>
+            <td><?php echo $nim; ?></td>
+            <td><?php echo $nilai->mahasiswa_model->get_by_id($nim)->nama_lengkap; ?></td>
+            <td><?php echo $nilai->krs_model->get_by_id($id_krs[$i])->nilai; ?></td>
+        </tr>
+       <?php } ?>
+    </table>
 </div>
