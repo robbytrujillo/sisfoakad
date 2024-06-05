@@ -49,7 +49,7 @@ $id_tahun_akademik = $krs->id_tahun_akademik;
                     Tahun Akademik (Semester)
                 </td>
                 <td>
-                    : <?php echo $thn->tahun_akademik."(".$tampilSemester.")"; ?>
+                    : <?php echo $thn->tahunakademik."(".$tampilSemester.")"; ?>
                 </td>
             </tr>
         </table>
