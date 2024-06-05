@@ -1,6 +1,6 @@
 <?php
 
-class Transkrip_nilai extends CI_Controller{
+class Transkripnilai extends CI_Controller{
     public function index() {
         $data = array(
             'nim' => set_value('nim')
