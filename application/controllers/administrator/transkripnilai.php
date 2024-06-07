@@ -11,6 +11,10 @@ class Transkripnilai extends CI_Controller{
         $this->load->view('administrator/masuk_transkrip',$data);
         $this->load->view('templates_administrator/footer');
     }
+
+    public function buat_transkrip_nilai() {
+        
+    }
 }
 
 ?>
