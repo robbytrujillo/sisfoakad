@@ -1,26 +1,25 @@
-<?php
+<?php 
 
-class Mahasiswa_model extends CI_Model {
+class Dosen_model extends CI_Model{
 
-    public $table = 'mahasiswa';
-    public $id = 'nim';
+    public $table = 'dosen';
+    public $id = 'id_dosen';
     public $order = 'DESC';
     public function tampil_data($table) {
         return $this->db->get($table);
     }
 
-    public function ambil_id_mahasiswa($id) {
-        $hasil = $this->db->where('id',$id)->get('mahasiswa');
-        
-        if ($hasil->num_rows() > 0) {
-            return $hasil->result();
+    public function insert_data($data, $table) {
+        $this->db->insert($table, $data);
+    }
+
+    public function ambil_kode_matakuliah($kode) {
+        $result = $this->db->where('kode_matakuliah',$kode)->get('matakuliah');
+        if($result->num_rows() > 0){
+            return $result->result();
         } else {
             return false;
         }
-    }
-
-    public function insert_data($data,$table) {
-        $this->db->insert($table,$data);    
     }
 
     public function update_data($where, $data, $table) {
@@ -28,10 +27,12 @@ class Mahasiswa_model extends CI_Model {
         $this->db->update($table,$data);
     }
 
-     public function hapus_data($where, $table) {
+    public function hapus_data($where, $table) {
         $this->db->where($where);
         $this->db->delete($table);
-    } 
+    }
+
+    
 
     public function get_by_id($id) {
         $this->db->where($this->id,$id);
