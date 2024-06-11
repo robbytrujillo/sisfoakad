@@ -13,10 +13,10 @@ class Dosen_model extends CI_Model{
         $this->db->insert($table, $data);
     }
 
-    public function ambil_kode_matakuliah($kode) {
-        $result = $this->db->where('kode_matakuliah',$kode)->get('matakuliah');
-        if($result->num_rows() > 0){
-            return $result->result();
+    public function ambil_id_dosen($id) {
+        $hasil = $this->db->where('nidn',$id)->get('dosen');
+        if($hasil->num_rows() > 0){
+            return $hasil->result();
         } else {
             return false;
         }

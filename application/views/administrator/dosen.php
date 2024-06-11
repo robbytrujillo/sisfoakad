@@ -24,12 +24,12 @@
 
             <tr>
                 <td><?php echo $no++ ?></td>
-                <td><?php echo dsn->nama_dosen  ?></td>
-                <td><?php echo dsn->alamat  ?></td>
-                <td><?php echo dsn->email  ?></td>
-                <td width="20px"><?php echo anchor('administrator/mahasiswa/detail/'.$dsn->id,'<div class="btn btn-sm btn-info"><i class="fa fa-eye"></i></div>') ?></td>
-                <td width="20px"><?php echo anchor('administrator/mahasiswa/update/'.$dsn->id,'<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>') ?></td>
-                <td width="20px"><?php echo anchor('administrator/mahasiswa/delete/'.$dsn->id,'<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>') ?></td>
+                <td><?php echo $dsn->nidn  ?></td>
+                <td><?php echo $dsn->nama_dosen  ?></td>
+                <td><?php echo $dsn->alamat  ?></td>
+                <td width="20px"><?php echo anchor('administrator/dosen/detail/'.$dsn->nidn,'<div class="btn btn-sm btn-info"><i class="fa fa-eye"></i></div>') ?></td>
+                <td width="20px"><?php echo anchor('administrator/dosen/update/'.$dsn->nidn,'<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>') ?></td>
+                <td width="20px"><?php echo anchor('administrator/dosen/delete/'.$dsn->nidn,'<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>') ?></td>
             </tr>
 
         <?php endforeach;?>

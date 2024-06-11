@@ -10,37 +10,34 @@ class Dosen extends CI_Controller {
     }
 
     public function detail($id) {
-        $data['detail'] = $this->mahasiswa_model->ambil_id_mahasiswa($id);
+        $data['detail'] = $this->dosen_model->ambil_id_dosen($id);
         $this->load->view('templates_administrator/header');
         $this->load->view('templates_administrator/sidebar');
-        $this->load->view('administrator/mahasiswa_detail',$data);
+        $this->load->view('administrator/dosen_detail',$data);
         $this->load->view('templates_administrator/footer');
     }
 
-    public function tambah_mahasiswa() {
-        $data['prodi'] = $this->mahasiswa_model->tampil_data('prodi')->result();
+    public function tambah_dosen() {
+        // $data['prodi'] = $this->dosen_model->tampil_data('prodi')->result();
         $this->load->view('templates_administrator/header');
         $this->load->view('templates_administrator/sidebar');
-        $this->load->view('administrator/mahasiswa_form',$data);
+        $this->load->view('administrator/dosen_form',$data);
         $this->load->view('templates_administrator/footer');
     }
 
-    public function tambah_mahasiswa_aksi() {
+    public function tambah_dosen_aksi() {
         $this->_rules();
 
         if ($this->form_validation->run() == FALSE) {
-            $this->tambah_mahasiswa();
+            $this->tambah_dosen();
         } else {
-            $nim            = $this->input->post('nim');
-            $nama_lengkap   = $this->input->post('nama_lengkap');
-            $alamat         = $this->input->post('alamat');
-            $email          = $this->input->post('email');
-            $telepon        = $this->input->post('telepon');
-            $tempat_lahir   = $this->input->post('tempat_lahir');
-            $tanggal_lahir  = $this->input->post('tanggal_lahir');
-            $jenis_kelamin  = $this->input->post('jenis_kelamin');
-            $nama_prodi     = $this->input->post('nama_prodi');
-            $photo          = $_FILES['photo'];
+            $nidn          = $this->input->post('nidn');
+            $nama_dosen    = $this->input->post('nama_dosen');
+            $alamat        = $this->input->post('alamat');
+            $jenis_kelamin = $this->input->post('jenis_kelamin');
+            $email         = $this->input->post('email');
+            $telepon       = $this->input->post('telepon');
+            $photo         = $_FILES['photo'];
 
             if ($photo = '') { 
 
@@ -57,26 +54,23 @@ class Dosen extends CI_Controller {
             }
 
             $data = array(
-                'nim'                => $nim,
-                'nama_lengkap'       => $nama_lengkap,
-                'alamat'             => $alamat,
-                'email'              => $email,
-                'telepon'             => $telepon,
-                'tempat_lahir'       => $tempat_lahir,  
-                'tanggal_lahir'      => $tanggal_lahir,
-                'jenis_kelamin'      => $jenis_kelamin,
-                'nama_prodi'         => $nama_prodi,   
-                'photo'              => $photo,        
+                'nidn'           => $nidn,
+                'nama_dosen'     => $nama_dosen,
+                'alamat'         => $alamat,
+                'jenis_kelamin'  => $jenis_kelamin,
+                'email'          => $email,
+                'telepon'        => $telepon,   
+                'photo'          => $photo,        
             );
 
-            $this->mahasiswa_model->insert_data($data, 'mahasiswa');
+            $this->dosen_model->insert_data($data, 'dosen');
             $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
-                                                        Data Mahasiswa berhasil ditambahkan!
+                                                        Data Dosen berhasil ditambahkan!
                                                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                                             <span aria-hidden="true">&times;</span>
                                                         </button>
                                                         </div>');
-            redirect('administrator/mahasiswa');
+            redirect('administrator/dosen');
 
             }
         }
