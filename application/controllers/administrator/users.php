@@ -70,7 +70,7 @@ class Users extends CI_Controller {
     public function update($id) {
         $where = array('id' => $id);
 
-        $data['users'] = $this->user_model->edit_data($where, 'users')->result();
+        $data['users'] = $this->user_model->edit_data($where, 'user')->result();
         $this->load->view('templates_administrator/header');
         $this->load->view('templates_administrator/sidebar');
         $this->load->view('administrator/users_update',$data);
@@ -94,7 +94,11 @@ class Users extends CI_Controller {
             'blokir'    => $blokir,
         );
 
-            $this->user_model->update_data($where,$data,'users');
+            $where = array (
+                'id' => $id
+            );
+
+            $this->user_model->update_data($where, $data,'user');
             $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
                                                         Data Users berhasil diubah!
                                                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -102,6 +106,18 @@ class Users extends CI_Controller {
                                                         </button>
                                                         </div>');
             redirect('administrator/users');
+    }
+
+    public function hapus($id) {
+            $where = array('id' => $id);
+            $this->user_model->hapus_data($where, 'user');
+            $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                                        Data User berhasil dihapus!
+                                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                        </div>');
+        redirect('administrator/users');
     }
 
 }

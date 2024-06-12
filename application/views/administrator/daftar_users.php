@@ -30,7 +30,7 @@
                 <td><?php echo $user->level ?></td>
                 <td><?php echo $user->blokir ?></td>
                 <td width="20px"><?php echo anchor('administrator/users/update/'.$user->id,'<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>') ?></td>
-                <td width="20px"><?php echo anchor('administrator/users/delete/'.$user->id,'<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>') ?></td>
+                <td width="20px"><?php echo anchor('administrator/users/hapus/'.$user->id,'<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>') ?></td>
             </tr>    
         <?php  endforeach; ?>
     </table>
