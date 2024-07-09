@@ -129,8 +129,8 @@
 
 <form method="post" action="<?= base_url('landing_page/kirim_pesan') ?>">
 
-<div class="row">
-  <div class="col md-8">
+<div class="row m-4">
+  <div class="col-md-8">
     <div class="alert alert-primary">
       <i class="fas fa-envelope-open-text"></i> HUBUNGI KAMI
     </div>
@@ -138,17 +138,20 @@
     <?= $this->session->flashdata('pesan') ?>
 
     <div class="form-group">
+      <label>Nama</label>
       <input type="text" name="nama" class="form-control">
       <?= form_error('nama', '<div class="text-danger small">','</div>') ?>
     </div>
     
     <div class="form-group">
+      <label>Email</label>
       <input type="text" name="email" class="form-control">
       <?= form_error('email', '<div class="text-danger small">','</div>') ?>
     </div>
     
     <div class="form-group">
-      <input type="text" name="pesan" class="form-control">
+      <label>Pesan</label>
+      <textarea type="text" name="pesan" class="form-control" rows="5"></textarea>
       <?= form_error('pesan', '<div class="text-danger small">','</div>') ?>
     </div>
 
