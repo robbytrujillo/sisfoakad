@@ -110,7 +110,7 @@ class Informasi extends CI_Controller {
                                                             <span aria-hidden="true">&times;</span>
                                                         </button>
                                                         </div>');
-        redirect('administrator/dosen');
+        redirect('administrator/informasi');
          }
     }
 ?>

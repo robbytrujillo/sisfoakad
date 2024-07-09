@@ -23,7 +23,7 @@
     
     <div class="form-group">
         <label>ISI INFORMASI</label>
-        <textarea type="text" name="isi_informasi" class="form-control" value="<?php echo $info->isi_informasi ?>"></textarea>
+        <input type="text" name="isi_informasi" class="form-control" value="<?php echo $info->isi_informasi ?>">
         <?php echo form_error('isi_informasi','<div class="text-danger small ml-3">','</div>') ?>
     </div>
     

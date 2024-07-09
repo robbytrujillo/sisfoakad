@@ -13,8 +13,8 @@ class Informasi_model extends CI_Model{
         $this->db->insert($table, $data);
     }
 
-    public function ambil_id_dosen($id) {
-        $hasil = $this->db->where('nidn',$id)->get('dosen');
+    public function ambil_id_informasi($id) {
+        $hasil = $this->db->where('nidn',$id)->get('informasi');
         if($hasil->num_rows() > 0){
             return $hasil->result();
         } else {
