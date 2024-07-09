@@ -13,6 +13,9 @@ class Hubungi_model extends CI_Model {
     }
 
     // https://myaccount.google.com/lesssecureapps
+    // https://sobatcoding.com/articles/kirim-email-menggunakan-gmail-dan-codeigniter-3
+    // https://masrud.com/kirim-email-codeigniter/
+    
     public function kirim_data($where,$table) {
         return $this->db->get_where($table, $where);
     }

@@ -28,9 +28,9 @@ class Hubungi_kami extends CI_Controller {
             'charshet'  => 'utf-8',
             'protocol'  => 'smtp',
             'smpt_host' => 'ssl://smtp.gmail.com',
-            'smtp_user' => 'robbyikusuma88@gmail.com',
-            'smtp_pass' => '12345678',
-            'smtp_port' => 46,
+            'smtp_user' => 'clientlws.com',
+            'smtp_pass' => 'boolhayam64',
+            'smtp_port' => 465,
             'crlf'      => "\r\n",
             'newline'   => "\r\n"
         ];
@@ -44,8 +44,26 @@ class Hubungi_kami extends CI_Controller {
         $this->email->subject($subject);
 
         $this->email->message($message);
+
+        if ($this->email->send()) {
+            $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+                                                        Pesan Terkirim!
+                                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                        </div>');
+            redirect('administrator/hubungi_kami');
+        } else {
+            $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-danger fade show" role="alert">
+                                                        Pesan Tidak Terkirim!
+                                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                        </div>');
+            redirect('administrator/hubungi_kami');
+        }
     }
 
-    
+
 }
 ?>
