@@ -5,6 +5,7 @@ class Landing_page extends CI_Controller {
         $data['identitas'] = $this->identitas_model->tampil_data('identitas')->result();
         $data['tentang'] = $this->tentang_model->tampil_data('tentang_kampus')->result();
         $data['informasi'] = $this->informasi_model->tampil_data('informasi')->result();
+        $data['hubungi'] = $this->hubungi_model->tampil_data('hubungi')->result();
         $this->load->view('templates_administrator/header');
         $this->load->view('landing_page',$data);
         $this->load->view('templates_administrator/footer');
