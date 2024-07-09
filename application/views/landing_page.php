@@ -111,11 +111,11 @@
   </div>
 </div>
 
-<div class="row m-4 text-center">
+<div class="row m-1 text-center">
 
   <?php foreach($informasi as $info): ?>
 
-  <div class="card m-2" style="width: 18rem;">
+  <div class="card m-1" style="width: 18rem;">
   <span class="display-2 text-center text-info"><i class="<?= $info->icon ?>"></i></span>
   <div class="card-body">
     <h5 class="card-title badge badge-info"><?= $info->judul_informasi ?></h5>
