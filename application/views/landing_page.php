@@ -71,9 +71,6 @@
       Selengkapnya...
     </button>
   </div>
-  <div class="card-footer text-muted">
-    2 days ago
-  </div>
 </div>
 
 <!-- Button trigger modal -->
@@ -108,9 +105,25 @@
  
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
 </div>
+
+<div class="row m-4">
+
+  <?php foreach($informasi as $info): ?>
+
+  <div class="card m-3" style="width: 18rem;">
+  <span class="display-2 text-center text-info"><i class="<?= $info->icon ?>"></i></span>
+  <div class="card-body">
+    <h5 class="card-title badge badge-info"><?= $info->judul_informasi ?></h5>
+    <p class="card-text"><?= $info->isi_informasi ?></p>
+    <a href="#" class="btn btn-primary btn-sm">Selengkapnya...</a>
+  </div>
+</div>
+
+  <?php endforeach; ?>
+</div>
+
