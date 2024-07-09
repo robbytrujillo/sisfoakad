@@ -36,13 +36,13 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="<?php echo base_url('assets/img/slider1.jpg') ?>" class="d-block w-100" alt="...">
+      <img src="<?php echo base_url('assets/img/slider4.jpeg') ?>" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="<?php echo base_url('assets/img/slider2.jpg') ?>" class="d-block w-100" alt="...">
+      <img src="<?php echo base_url('assets/img/slider5.jpg') ?>" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="<?php echo base_url('assets/img/slider3.jpg') ?>" class="d-block w-100" alt="...">
+      <img src="<?php echo base_url('assets/img/slider6.jpg') ?>" class="d-block w-100" alt="...">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -53,4 +53,64 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
+</div>
+
+
+
+<div class="card text-center m-5">
+  <div class="card-header">
+    <strong>TENTANG KAMPUS</strong>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+      <?php foreach($tentang as $ttg) : ?>
+        <?php echo word_limiter($ttg->sejarah,75) ?>
+      <?php endforeach; ?>
+    </p>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+      Selengkapnya...
+    </button>
+  </div>
+  <div class="card-footer text-muted">
+    2 days ago
+  </div>
+</div>
+
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Tentang Kampus</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-justify">
+        <strong>SEJARAH IHBS</strong>
+        <?php foreach($tentang as $ttg) : ?>
+          <?= ($ttg->sejarah) ?>
+        <?php endforeach; ?><br><br>
+        
+        <strong>VISI IHBS</strong>
+        <?php foreach($tentang as $ttg) : ?>
+          <?= ($ttg->visi) ?>
+        <?php endforeach; ?><br><br>
+        
+        <strong>MISI IHBS</strong>
+        <?php foreach($tentang as $ttg) : ?>
+          <?= ($ttg->misi) ?>
+        <?php endforeach; ?>
+
+ 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
 </div>
