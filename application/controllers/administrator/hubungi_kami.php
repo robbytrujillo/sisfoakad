@@ -21,6 +21,8 @@ class Hubungi_kami extends CI_Controller {
     public function kirim_email_aksi() {
 
         $to_email = $this->input->post('email');
+        $subject = $this->input->post('subject');
+        $message = $this->input->post('pesan');
         $config = [
             'mailtype'  => 'html',
             'charshet'  => 'utf-8',
@@ -43,5 +45,7 @@ class Hubungi_kami extends CI_Controller {
 
         $this->email->message($message);
     }
+
+    
 }
 ?>
